@@ -7,8 +7,8 @@ permalink:           pretty
 title:               MiPais
 tagline:             'Datos, análisis, programas'
 description:         ''
-url:                 https://mipais.github.io
-baseurl:             ''
+url:                 'https://mipais.github.io'
+baseurl:             'https://mipais.github.io'
 paginate:            5
 
 # About/contact
