@@ -24,7 +24,7 @@ function blink(e) {
 }
 
 function c(que,el) {
-	a_el.value= location.href+'/n/'+que;
+	a_el.value= location.href.replace(/\?.*/,'')+'n/'+que;
 	a_el.select();
 	document.execCommand('copy'); 
 	blink(el);
