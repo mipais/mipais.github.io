@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="page" style="text-align: center;">
+	<a href="{{page.link}}">
+		<img style="max-width: 80%; width: 40em;" src="/nimg/{{ page.name | replace: ".md", ".png" }}"/>
+ 		{{ page.title }}
+	</a>
+ 	{{ content }}
+</div>

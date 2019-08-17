@@ -1,0 +1,43 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               MiPais
+tagline:             'Datos, análisis, programas'
+description:         ''
+url:                 https://mipais.github.io
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              MiPais
+  url:               https://mipais.github.io
+  email:             
+
+# Custom vars
+version:             2.0.0
+
+kramdown:
+  input: GFM
+
+collections:
+  n:
+    permalink: /n/:path
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "n"
+    values:
+      layout: "news"
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+
