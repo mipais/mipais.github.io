@@ -11,7 +11,8 @@ title: Macri Burns
 {%- if p.path contains "b/" -%}
 
 <div class="card" onclick="c('{{ p.url }}',this)">
-	<img src="/bimg/{{ p.name | replace: ".md", page.imgtype }}.jpg">
+	<img style="max-height: 6em;" src="/bimg/{{ p.name | replace: ".md", page.imgtype }}.jpg"><br>
+	{{ p.name | replace: ".md", "" }}
 </div>
 
 {%- endif -%}
@@ -21,3 +22,5 @@ title: Macri Burns
 <img id="ar" src="/img/ar.jpg" style="display: none;">
 <img id="v" src="/img/v.png" style="height:2em; float: left; display: none;">
 <script src="/index.js"></script>
+<script>init_from_img()</script>
+

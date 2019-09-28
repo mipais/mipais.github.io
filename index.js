@@ -57,4 +57,5 @@ function init_from_meta() {
 }
 
 function init_from_img() {
+	init_vars();
 }
