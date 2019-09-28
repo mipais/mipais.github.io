@@ -50,7 +50,7 @@ function u(filtro) {
 
 function init_from_meta() {
 	init_vars();
-	url_base+='/n';
+	url_base+='/n/';
 	fetch("meta.json").then(res => res.json()).then( rdoc => {
 		doc= rdoc;
 		u("*");
