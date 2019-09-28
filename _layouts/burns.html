@@ -3,9 +3,5 @@ layout: default
 ---
 
 <div class="page" style="text-align: center;">
-	<a href="{{page.link}}">
-		<img style="max-width: 80%; width: 40em;" src="/bimg/{{ page.name | replace: ".md", ".jpg" }}"/>
- 		{{ page.title }}
-	</a>
- 	{{ content }}
+	<img style="max-width: 80%; width: 40em;" src="/{{ page.imgdir }}/{{ page.name | replace: ".md", page.imgtype }}"/>
 </div>

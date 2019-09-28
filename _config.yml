@@ -1,4 +1,4 @@
-collections:
+nocollections:
   n:
     permalink: /n/:path
     output: true

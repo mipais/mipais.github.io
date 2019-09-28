@@ -1,3 +1,4 @@
+function init_vars() {
 m_el= document.getElementById("m");
 l_el= document.getElementById("l");
 a_el= document.getElementById("a");
@@ -6,6 +7,7 @@ v_to= null;
 
 kwd= {};
 doc= {};
+}
 
 function mix(l) {
 	var r= [];	
@@ -45,8 +47,14 @@ function u(filtro) {
 	l_el.innerHTML= mix(r).map(d => '<div class="card" onclick="c(\''+d.uloc+'\',this)">'+d.titulo+'<br><a href="n/'+d.uloc+'">ir</a></div>').join('');
 }
 
-fetch("meta.json").then(res => res.json()).then( rdoc => {
-	doc= rdoc;
-	u("*");
-	m_el.innerHTML= ['*'].concat(Object.keys(kwd).sort()).map(k => '<button onclick="u(\''+k+'\')">'+k+'</button>').join(' ');
-});
+function init_from_meta() {
+	init_vars();
+	fetch("meta.json").then(res => res.json()).then( rdoc => {
+		doc= rdoc;
+		u("*");
+		m_el.innerHTML= ['*'].concat(Object.keys(kwd).sort()).map(k => '<button onclick="u(\''+k+'\')">'+k+'</button>').join(' ');
+	});
+}
+
+function init_from_img() {
+}

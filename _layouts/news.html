@@ -4,7 +4,7 @@ layout: default
 
 <div class="page" style="text-align: center;">
 	<a href="{{page.link}}">
-		<img style="max-width: 80%; width: 40em;" src="/nimg/{{ page.name | replace: ".md", ".png" }}"/>
+		<img style="max-width: 80%; width: 40em;" src="/{{ page.imgdir }}/{{ page.name | replace: ".md", page.imgtype }}"/>
  		{{ page.title }}
 	</a>
  	{{ content }}

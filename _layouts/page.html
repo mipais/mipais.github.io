@@ -1,11 +1,16 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include head.html %}
+  <body style="text-align: center;">
 
-<div class="page" style="text-align: center;">
-	<a href="{{page.link}}">
-		<img style="max-width: 80%; width: 40em;" src="/{{ page.imgdir }}/{{ page.name | replace: ".md", page.imgtype }}"/>
- 		{{ page.title }}
+	<a class="hdr" href="{{ site.baseurl }}/" title="Inicio">
+		<span style="color: #268bd2;">{{ site.title }}</span>
+		{{ site.tagline }}
 	</a>
- 	{{ content }}
-</div>
+
+	<div class="container content">
+		{{ content }}
+	</div>
+
+  </body>
+</html>
