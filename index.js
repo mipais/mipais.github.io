@@ -1,12 +1,13 @@
 function init_vars() {
-m_el= document.getElementById("m");
-l_el= document.getElementById("l");
-a_el= document.getElementById("a");
-v_el= document.getElementById("v");
-v_to= null;
+	url_base= location.href.match(/https?:\/\/[^\/]*/)[0];
+	m_el= document.getElementById("m");
+	l_el= document.getElementById("l");
+	a_el= document.getElementById("a");
+	v_el= document.getElementById("v");
+	v_to= null;
 
-kwd= {};
-doc= {};
+	kwd= {};
+	doc= {};
 }
 
 function mix(l) {
@@ -26,7 +27,7 @@ function blink(e) {
 }
 
 function c(que,el) {
-	a_el.value= location.href.replace(/\?.*/,'')+'n/'+que;
+	a_el.value= url_base+'/'+que;
 	a_el.select();
 	document.execCommand('copy'); 
 	blink(el);
@@ -49,6 +50,7 @@ function u(filtro) {
 
 function init_from_meta() {
 	init_vars();
+	url_base+='/n';
 	fetch("meta.json").then(res => res.json()).then( rdoc => {
 		doc= rdoc;
 		u("*");
@@ -58,4 +60,5 @@ function init_from_meta() {
 
 function init_from_img() {
 	init_vars();
+	url_base+='/b';
 }
