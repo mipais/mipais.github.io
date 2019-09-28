@@ -27,7 +27,7 @@ function blink(e) {
 }
 
 function c(que,el) {
-	a_el.value= url_base+'/'+que;
+	a_el.value= url_base+que;
 	a_el.select();
 	document.execCommand('copy'); 
 	blink(el);
@@ -60,5 +60,4 @@ function init_from_meta() {
 
 function init_from_img() {
 	init_vars();
-	url_base+='/b';
 }
