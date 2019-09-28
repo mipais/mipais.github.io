@@ -11,12 +11,13 @@ title: Macri Burns
 {%- if p.path contains "b/" -%}
 
 <div class="card" onclick="c('{{ p.url }}',this)">
-	<img src="bimg/{{ p.name | replace: ".md", page.imgtype }}.jpg">
+	<img src="/bimg/{{ p.name | replace: ".md", page.imgtype }}.jpg">
 </div>
 
 {%- endif -%}
 {%- endfor -%}
 </div>
 <textarea id="a" style="height:0px; position: fixed; bottom: 0; left: 0;"></textarea>
+<img id="ar" src="/img/ar.jpg" style="display: none;">
 <img id="v" src="/img/v.png" style="height:2em; float: left; display: none;">
-<script src="index.js"></script>
+<script src="/index.js"></script>
