@@ -1,3 +1,11 @@
+collections:
+  n:
+    permalink: /n/:path
+    output: true
+  b:
+    permalink: /b/:path
+    output: true
+
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
@@ -8,7 +16,7 @@ title:               MiPais
 tagline:             'Datos, análisis, programas'
 description:         ''
 url:                 'https://mipais.github.io'
-baseurl:             'https://mipais.github.io'
+#baseurl:             'https://mipais.github.io'
 paginate:            5
 
 # About/contact
@@ -23,21 +31,26 @@ version:             2.0.0
 kramdown:
   input: GFM
 
-collections:
-  n:
-    permalink: /n/:path
-    output: true
-
 defaults:
   -
     scope:
-      path: ""
-      type: "n"
+      path: "n"
     values:
       layout: "news"
+      imgdir: "nimg"
+      imgtype: ".png"
   -
     scope:
-      path: "" # all files
+      path: "b"
+    values:
+      layout: "burns"
+      imgdir: "bimg"
+      imgtype: ".jpg"
+  -
+    scope:
+      path: ""
+      type: ""
     values:
       layout: "page"
-
+      imgdir: "XXXERROR"
+      imgtype: ".jpg"
