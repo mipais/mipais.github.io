@@ -33,7 +33,11 @@
   {% endif %}
 
 	<!-- {{ page.collection }} -->
+	{%- if page.img -%}
+  <meta property="og:image" content="{{ site.baseurl }}/{{ page.img }}">
+	{%- else -%}
   <meta property="og:image" content="{{ site.baseurl }}/{{ page.imgdir }}/{{ page.name | replace: ".md", page.imgtype | }}">
+	{% endif %}
 
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary" />
@@ -50,7 +54,11 @@
   <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncatewords: 50 }}">
   {% endif %}
 
+	{%- if page.img -%}
+  <meta property="twitter:image" content="{{ site.baseurl }}/{{ page.img }}">
+	{%- else -%}
   <meta property="twitter:image" content="{{ site.baseurl }}/{{ page.imgdir }}/{{ page.name | replace: ".md", page.imgtype | }}">
+	{% endif %}
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
