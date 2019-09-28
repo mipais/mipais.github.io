@@ -44,7 +44,7 @@ defaults:
       path: "b"
     values:
       layout: "burns"
-      imgdir: "bimg"
+      imgdir: "bimg_s"
       imgtype: ".jpg"
   -
     scope:
